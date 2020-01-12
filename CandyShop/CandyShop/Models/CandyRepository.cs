@@ -8,7 +8,7 @@ namespace CandyShop.Models
     {
         private readonly ICategoryRepository _candyRepository = new CategoryRepository();
 
-        public IEnumerable<Candy> GetAllCand => new List<Candy>
+        public IEnumerable<Candy> GetAllCandy => new List<Candy>
         {
             new Candy {
                 CandyId = 1,
@@ -49,7 +49,7 @@ namespace CandyShop.Models
 
         public Candy GetCandyById(int candyId)
         {
-            return GetAllCand.FirstOrDefault(c => c.CandyId == candyId);
+            return GetAllCandy.FirstOrDefault(c => c.CandyId == candyId);
         }
     }
 }
